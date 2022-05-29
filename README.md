@@ -18,7 +18,8 @@
       
 ## 📌找到我
 
-- 哔哩哔哩[@清妥ovo](https://space.bilibili.com/13890708?spm_id_from=333.1007.0.0)
+- 哔哩哔哩[@是陈曳呀](https://space.bilibili.com/13890708?spm_id_from=333.1007.0.0)
+- 抖音[@是陈曳呀]
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=Qin-tuo&show_icons=true&theme=dark&count_private=true)
 ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Qin-tuo&theme=dark&layout=compact)  
