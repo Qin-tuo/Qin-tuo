@@ -19,7 +19,8 @@
 ## 📌找到我
 
 - 哔哩哔哩[@是陈曳呀](https://space.bilibili.com/13890708?spm_id_from=333.1007.0.0)
-- 抖音[@是陈曳呀]
+- 抖音[@是陈曳呀](https://v.douyin.com/F73V87W/) 仅仅是分享日常哦
+- 闲鱼[@是陈曳呀](https://m.tb.cn/h.fujAMu1?tk=ZkNz2lrM1dj) 会在不忙的时候接一些单子，欢迎来叨扰=-=
 
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=Qin-tuo&show_icons=true&theme=dark&count_private=true)
 ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Qin-tuo&theme=dark&layout=compact)  
