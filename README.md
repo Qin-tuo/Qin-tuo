@@ -1,49 +1,62 @@
-### Hi there I See You 👋
+<p align="center">
+  <img src="./assets/workbench.svg" width="100%" alt="Qin-tuo — From signals to systems. An open workbench connecting circuits, robot joints and computation." />
+</p>
 
-立志要成为像稚晖君大佬那样的全栈工程师（哇咔咔咔）
-但是现在的还菜得很=-=
+# 陈曳 / Qin-tuo
 
-咳咳！
-本人是一枚大学生在读，专业为自动化专业，兴趣爱好为电子设计、嵌入式设计，以及正在入坑的边缘异构计算与推理优化（在偷偷学 Linux / CUDA / Triton ：））
+机器人软件工程师，正在深入**边缘推理与系统性能优化**。
+喜欢沿着一个问题往下追：从模型与运行时，到驱动、总线和真实硬件。
 
-在校期间参加了 **Robomaster 机甲大师赛、电子设计竞赛、飞思卡尔智能车竞赛以及起重机设计大赛** 等电子相关的竞赛，非常感谢这些竞赛使我对电子设计产生了非常浓厚的兴趣爱好！！！
+[工作台](#工作台) · [实验手记](#实验手记) · [Bilibili ↗](https://space.bilibili.com/13890708) · [所有仓库 ↗](https://github.com/Qin-tuo?tab=repositories)
 
-平时的爱好为复刻别人开源的很酷的玩意，并且自己改造一下（因为实在是比较菜，但是又菜又爱玩 🙈）
+---
 
-## 🚀 方向
-> **边缘异构推理系统与性能优化**（NVIDIA CUDA / Triton / RKNN / TensorRT / ONNX）
-> + 嵌入式软硬件设计（STM32 / ROS2 / 电机驱动）
+## 工作台
 
-## 🛠 技能
+### 01 / 让机器动起来
 
-**语言**
-- C / C++ / Python（都很菜，正在努力）
+机器人最终要和真实的电机打交道。我关心的是：型号、协议和控制模式各不相同，怎样把它们接到一个清楚、可复用的接口上？
 
-**嵌入式 & 硬件**
-- Keil、STM32CubeMX 等嵌入式开发软件
-- AD、立创 EDA 等硬件设计软件，能进行简单硬件系统设计
-- ROS 2、SocketCAN 电机/舵机驱动
+在 **khcan** 中，我把 SocketCAN 电机与串口舵机接入 ROS 2 驱动库，让配置、状态查询和控制入口各有边界。代码之外，型号参数、单位和设备状态同样值得认真对待。
 
-**边缘推理 & 并行计算**
-- CUDA、Triton、TensorRT、RKNN、ONNX
-- PyTorch 扩展、vLLM、多模型并发调度（学习中）
+`C++` · `ROS 2` · `SocketCAN` · `Motor drivers`
 
-## 📦 项目
+[阅读驱动实现 →](https://github.com/Qin-tuo/Open_Motor_SDK)
 
-- [Multi_Model_Inference](https://github.com/Qin-tuo/Multi_Model_Inference) — 面向 NVIDIA Jetson Orin NX 16GB 的多模型推理、并发调度与性能优化知识库
-- [RK_LLM](https://github.com/Qin-tuo/RK_LLM) — 通过 RKNN3 在 RK3588 + RK1828 加速器上部署 Qwen 模型
-- [S100_VLA](https://github.com/Qin-tuo/S100_VLA) — 在 RDK S100 + SO-101 机械臂上部署 ACT 策略（VLA）
-- [Open_Motor_SDK](https://github.com/Qin-tuo/Open_Motor_SDK) — `khcan`：ROS 2 电机/舵机驱动包（SocketCAN + 飞特串口舵机）
-- [RK_S100_MFSystem](https://github.com/Qin-tuo/RK_S100_MFSystem) — RK S100 双板具身系统项目
-- [300W-digital-amplifier](https://github.com/Qin-tuo/300W-digital-amplifier) — TPA3251 300W 数字功放（含 EQ/滤波、控制面板、VFD 显示等模块）
-- [-Fire-mask](https://github.com/Qin-tuo/-Fire-mask) — 基于 STM32 与 LabVIEW 的消防面罩设计
-- [Smart_Lock-WX-](https://github.com/Qin-tuo/Smart_Lock-WX-) — 智能锁（STM32 端 + 微信端 + 原理图）
+### 02 / 让模型适应机器
 
-## 📌 找到我
+一块边缘设备上，感知、语言模型和其他任务会争用算力与内存。我想弄清楚：**多个任务一起运行时，延迟、内存和资源分配会怎样变化？**
 
-- 哔哩哔哩 [@是陈曳呀](https://space.bilibili.com/13890708?spm_id_from=333.1007.0.0)
-- 抖音 [@是陈曳呀](https://v.douyin.com/F73V87W/) 仅仅是分享日常哦
-- 闲鱼 [@是陈曳呀](https://m.tb.cn/h.fujAMu1?tk=ZkNz2lrM1dj) 会在不忙的时候接一些单子，欢迎来叨扰=-=
+我正以 **Jetson Orin NX 16GB** 为目标整理多模型推理的知识库与实验路线，继续深入 CUDA、TensorRT 和性能分析。当前处于调研与方案阶段，单模型基线和多模型并发仍待目标硬件验证。
 
-![Github Stats](https://github-readme-stats.vercel.app/api?username=Qin-tuo&show_icons=true&theme=dark&count_private=true)
-![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Qin-tuo&theme=dark&layout=compact)
+`Learning & exploring` · `Edge inference` · `Memory` · `Scheduling`
+
+[进入多模型推理笔记 →](https://github.com/Qin-tuo/Multi_Model_Inference)
+
+### 03 / 保留动手的乐趣
+
+我从自动化、电子竞赛和嵌入式设计走来，也喜欢复刻开源作品，再按自己的想法改一改。功放、显示、控制板——一个想法变成桌上能摸到的东西，这件事一直很有吸引力。
+
+早期的数字功放、消防面罩和智能锁，是这条路径留下的作品。它们也提醒我，软件之外还有信号、电源、接口和实际使用的人。
+
+[看看数字功放 →](https://github.com/Qin-tuo/300W-digital-amplifier) · [早期硬件作品 →](https://github.com/Qin-tuo?tab=repositories)
+
+---
+
+## 实验手记
+
+<sub>2026 · 09 / 当前公开进度，随实验更新</sub>
+
+**接口正在成形。** khcan 已提供可复用驱动库与诊断入口；继续围绕具体设备的协议、参数映射和状态管理打磨。[代码与说明 ↗](https://github.com/Qin-tuo/Open_Motor_SDK)
+
+**先把验证路径搭起来。** S100 / SO-101 探索已有主机 mock 工作流；ACT 集成、板端推理和机械臂实测仍是后续里程碑。[当前边界与进度 ↗](https://github.com/Qin-tuo/S100_VLA#current-status)
+
+**下一项待验证的问题。** 在 Orin 上建立可复现的单模型基线，再观察加入第二种负载之后的延迟和内存变化。[实验路线 ↗](https://github.com/Qin-tuo/Multi_Model_Inference#当前状态)
+
+---
+
+平时与 **C / C++、Python、Linux、ROS 2 和嵌入式硬件** 打交道；正在把 **CUDA / TensorRT / Triton** 连接到自己的系统基础上。
+
+如果你也在折腾机器人、端侧推理，或者有意思的硬件，欢迎在相关仓库的 Issue 中交流。[Bilibili 上的我是「是陈曳呀」↗](https://space.bilibili.com/13890708)
+
+<sub>Build something. Measure it. Understand it.</sub>
